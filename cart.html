@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cart Page</title>
+        <!-- custom css file link  -->
+        <link rel="stylesheet" href="index.css">
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    </head>
+    <body>
+      <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+    
+        <a href="#" class="logo">karam<span>lyy</span></a>
+    
+        <nav class="navbar">
+            <a href="welcome.html">home</a>
+            <a href="#gallery">gallery</a>
+            <a href="#services">services</a>
+            <a href="#contact">contact</a>
+        </nav>
+    
+        <div class="icons">
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+    
+    </header>
+    
+    <!-- header section ends -->
+    <!-- login form container  -->
+
+<div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+
+    <form>
+        <h3>Logged In</h3>
+        <center><span id="user" class="message">Hello, < email-id ></Email-id></span></center>
+        <button class="btn btn-danger" onclick="logout()">Logout</button>
+    </form>
+
+</div>
+    <br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/>
+    <div class="container">
+      <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart<sup><span class="total-count"></span></sup></button>
+          <button class="clear-cart btn btn-danger">Clear Cart</button></div>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="show-cart table">
+                
+              </table>
+              <div>Total price: $<span class="total-cart"></span></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Order now</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="index.js"></script>
+    
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="firebase.js"></script>
+        <script src="welcome.js"></script>
+        <script src="cart.js"></script>
+    </body>
+</html>
